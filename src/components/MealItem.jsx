@@ -25,7 +25,7 @@ export default function MealItem({ meal }) {
           <p className="meal-item-description">{meal.description}</p>
         </div>
         <p className="meal-item-actions">
-          <Button onClick={handleAddMealToCart}>{isAddedToCart ? 'Added to Cart' : 'Add to Cart'}</Button>
+          <Button onClick={handleAddMealToCart}>{isAddedToCart ? 'Remove from Cart' : 'Add to Cart'}</Button>
         </p>
       </article>
     </li>
