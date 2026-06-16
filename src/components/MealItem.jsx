@@ -9,7 +9,7 @@ export default function MealItem({ meal }) {
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   function handleAddMealToCart() {
-    !isAddedToCart ? cartCtx.addItem(meal) : cartCtx.removeItem(meal.id);
+    cartCtx.addItem(meal);
     setIsAddedToCart(!isAddedToCart);
   }
 
@@ -25,7 +25,7 @@ export default function MealItem({ meal }) {
           <p className="meal-item-description">{meal.description}</p>
         </div>
         <p className="meal-item-actions">
-          <Button onClick={handleAddMealToCart}>{isAddedToCart ? 'Remove from Cart' : 'Add to Cart'}</Button>
+          <Button onClick={handleAddMealToCart}>Add to Cart</Button>
         </p>
       </article>
     </li>
